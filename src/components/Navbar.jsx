@@ -31,17 +31,32 @@ const Navbar = ({ theme, setTheme }) => {
                 className={`text-gray-700 dark:text-white sm:text-sm
                 ${!sidebarOpen ? 'max-sm:w-0 overflow-hidden' : 'max-sm:w-60 max-sm:pl-10'}
                 max-sm:fixed top-0 bottom-0 right-0 max-sm:min-h-screen max-sm:h-full
-                max-sm:flex-col max-sm:bg-primary max-sm:text-white max-sm:pt-20
+                max-sm:flex-col max-sm:bg-primary dark:max-sm:bg-[#111] max-sm:text-white max-sm:pt-20
                 flex sm:items-center gap-5 transition-all`}
             >
 
                 {/* Close button for mobile sidebar */}
-                <img
+                <button
                     onClick={() => setSidebarOpen(false)}
-                    src={assets.close_icon}
-                    alt=''
-                    className='w-5 absolute right-4 top-4 sm:hidden cursor-pointer'
-                />
+                    className="absolute right-4 top-4 sm:hidden cursor-pointer text-white p-1"
+                    aria-label="Close Menu"
+                >
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M6 18L18 6M6 6L18 18"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                </button>
 
                 {/* Navigation links shown in navbar or mobile sidebar */}
 
@@ -98,12 +113,28 @@ const Navbar = ({ theme, setTheme }) => {
                 </a>
 
                 {/* Hamburger menu icon (only on small screens) */}
-                <img
+                <button
                     onClick={() => setSidebarOpen(true)}
-                    src={assets.menu_icon}
-                    className='w-6 sm:hidden cursor-pointer'
-                    alt=""
-                />
+                    className="sm:hidden cursor-pointer p-1"
+                    aria-label="Open Menu"
+                    style={{ color: theme === 'dark' ? '#ffffff' : '#000000' }}
+                >
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M4 6H20M4 12H20M4 18H20"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                </button>
 
             </div>
 

@@ -29,8 +29,7 @@ const Hero = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
-                className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>Turning imagination into
-                <span className='bg-linear-to-r from-primary to-[#4d8cea] bg-clip-text text-transparent'> digital</span> impact.</motion.h1>
+                className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'><span style={{ background: 'linear-gradient(135deg, #3530d4 0%, #9b10a8 20%, #e0104c 40%, #ff3300 60%, #ff8c00 80%, #ffd000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>Turning imagination into digital impact.</span></motion.h1>
 
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
