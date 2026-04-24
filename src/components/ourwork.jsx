@@ -45,10 +45,20 @@ const OurWork = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="hover:scale-102 duration-500 transition-all cursor-all cursor-pointer"
+                            whileHover={{ y: -6 }}
+                            className="cursor-pointer group"
                         >
-                            <img src={work.image} alt="" className="w-full rounded-xl" />
-                            <h3 className="mt-3 mb-2 text-lg font-semibold">{work.title}</h3>
+                            {/* Image wrapper — clips the zoom */}
+                            <div className="overflow-hidden rounded-xl">
+                                <motion.img
+                                    src={work.image}
+                                    alt={work.title}
+                                    className="w-full rounded-xl"
+                                    whileHover={{ scale: 1.07 }}
+                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                />
+                            </div>
+                            <h3 className="mt-3 mb-2 text-lg font-semibold group-hover:text-primary transition-colors duration-300">{work.title}</h3>
                             <p className="text-sm opacity-60 w-5/6">{work.description}</p>
                         </motion.div>
                     ))
