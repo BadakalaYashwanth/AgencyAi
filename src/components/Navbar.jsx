@@ -104,13 +104,16 @@ const Navbar = ({ theme, setTheme }) => {
                 <ThemeToggleBtn theme={theme} setTheme={setTheme} />
 
                 {/* Connect button (hidden on small screens) */}
-                <a
+                <motion.a
                     href="#contact-us"
-                    className='text-sm max-sm:hidden flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 transition-all'
+                    className='text-sm max-sm:hidden flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer'
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                     Connect
                     <img src={assets.arrow_icon} width={14} alt="" />
-                </a>
+                </motion.a>
 
                 {/* Hamburger menu icon (only on small screens) */}
                 <button

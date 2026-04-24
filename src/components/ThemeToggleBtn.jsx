@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import assets from '../assets/assets'
+import { motion } from "motion/react"
 
 // Functional component receiving theme and setTheme as props
 const ThemeToggleBtn = ({ theme, setTheme }) => {
@@ -15,7 +16,11 @@ const ThemeToggleBtn = ({ theme, setTheme }) => {
     return (
         <>
             {/* Button wrapper */}
-            <button>
+            <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
 
                 {/* 
           Ternary condition:
@@ -45,7 +50,7 @@ const ThemeToggleBtn = ({ theme, setTheme }) => {
 
                 )}
 
-            </button>
+            </motion.button>
         </>
     )
 }

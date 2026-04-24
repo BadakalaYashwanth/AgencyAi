@@ -36,7 +36,7 @@ const Hero = () => {
                     animate={{ y: [0, -6, 0] }} // Gentle idle floating
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     whileHover={{ scale: 1.05, y: -8 }}
-                    className='relative overflow-hidden inline-flex items-center gap-2 p-1.5 pr-4 rounded-full bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] bg-[length:200%_200%] text-white shadow-xl shadow-[#ee2a7b]/30 cursor-pointer border border-white/20'
+                    className='relative overflow-hidden inline-flex items-center gap-2 p-1.5 pr-4 rounded-full bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] bg-size-[200%_200%] text-white shadow-xl shadow-[#ee2a7b]/30 cursor-pointer border border-white/20'
                     style={{ animation: 'flowing-gradient 4s ease infinite' }}
                 >
                     <style>
