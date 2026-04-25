@@ -1,6 +1,7 @@
 import React from 'react'
 import assets from '../assets/assets'
 import { motion } from "motion/react"
+import SocialIcons from './SocialIcons'
 
 const Footer = () => {
     return (
@@ -79,21 +80,14 @@ const Footer = () => {
                 >
                     Copyright 2026 © agency.ai - All Right Reserved.
                 </motion.p>
-                <div className='flex gap-5'>
-                    {[assets.facebook_icon, assets.twitter_icon, assets.instagram_icon, assets.linkedin_icon].map((icon, index) => (
-                        <motion.img
-                            key={index}
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 0.6, y: 0 }}
-                            whileHover={{ opacity: 1, scale: 1.1 }}
-                            transition={{ duration: 0.4, delay: 0.7 + (index * 0.1) }}
-                            viewport={{ once: true }}
-                            src={icon}
-                            alt="Social Icon"
-                            className='w-6 cursor-pointer transition-all duration-300 dark:invert hover:brightness-0 dark:hover:brightness-0'
-                        />
-                    ))}
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.7 }}
+                    viewport={{ once: true }}
+                >
+                    <SocialIcons />
+                </motion.div>
             </div>
         </motion.div>
     )
