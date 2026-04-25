@@ -13,7 +13,7 @@ const Footer = () => {
         >
             <div className='flex flex-col md:flex-row justify-between items-start gap-10 mb-16'>
                 {/* Left Side: Logo and Description */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,7 +44,7 @@ const Footer = () => {
                 </motion.div>
 
                 {/* Right Side: Newsletter */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
@@ -70,7 +70,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className='pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-5'>
-                <motion.p 
+                <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 0.4 }}
                     transition={{ duration: 1, delay: 0.6 }}
@@ -81,16 +81,16 @@ const Footer = () => {
                 </motion.p>
                 <div className='flex gap-5'>
                     {[assets.facebook_icon, assets.twitter_icon, assets.instagram_icon, assets.linkedin_icon].map((icon, index) => (
-                        <motion.img 
+                        <motion.img
                             key={index}
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 0.6, y: 0 }}
                             whileHover={{ opacity: 1, scale: 1.1 }}
                             transition={{ duration: 0.4, delay: 0.7 + (index * 0.1) }}
                             viewport={{ once: true }}
-                            src={icon} 
-                            alt="Social Icon" 
-                            className='w-6 cursor-pointer dark:invert' 
+                            src={icon}
+                            alt="Social Icon"
+                            className='w-6 cursor-pointer transition-all duration-300 dark:invert hover:brightness-0 dark:hover:brightness-0'
                         />
                     ))}
                 </div>
